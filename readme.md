@@ -75,5 +75,4 @@ Maybe you want to delete that image, try this:
 
 ```php
     $company->deleteUploadFor('photo');
-}]);
 ```
