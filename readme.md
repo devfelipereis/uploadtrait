@@ -8,10 +8,14 @@ Just tested with Laravel 5.4. But it should work with Laravel 5.x.
 
 Note: This is something made for my setup and works good. I like storage for dev and s3 for production. Feel free to change whatever you like to meet your needs ;)
 
-### How to use it
+### How to install
 
-Download the **UploadTrait.php** file and put it somewhere in your project.
-Remember to change the namespace to match the location. I like to put my traits in **App\Traits**
+```
+composer require devfelipereis/uploadtrait
+```
+
+Now see the example below to understand how to use it.
+
 
 # Example
 
