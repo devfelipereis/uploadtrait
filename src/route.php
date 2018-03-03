@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/storage', ['as' => 'uploaded-file', 'uses' => function() {
-	$path = $_GET['path'];
+	$path = isset($_GET['path']) ? $_GET['path'] : null;
 	if (!$path) {
 	    abort(404);
 	}
