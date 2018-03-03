@@ -16,5 +16,12 @@
         "psr-4": {
             "DevFelipeReis\\UploadTrait\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevFelipeReis\\UploadTrait\\UploadTraitServiceProvider"
+            ]
+        }
     }
 }
