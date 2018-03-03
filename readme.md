@@ -2,7 +2,7 @@
 A simple upload trait for laravel.
 It will upload to the local storage if in development and to a s3 bucket if in production/staging.
 
-For production, you need to follow laravel documentation to set s3 as your default cloud disk.
+For production, you need to follow the laravel documentation to set s3 as your default cloud disk.
 
 Just tested with Laravel 5.4. But it should work with Laravel 5.x.
 
