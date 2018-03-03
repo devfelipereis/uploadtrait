@@ -10,6 +10,6 @@
             "homepage": "https://felipereis.blog.br"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "dev-master",
     "require": {}
 }
