@@ -61,20 +61,6 @@ public function store(CreateCompanyRequest $request)
 
 ### How to access the image?
 
-For dev, I like to create a route like this:
-
-**Note:** This route will only be used for dev. For production, a full url for the file in your s3 bucket will be used.
-
-```php
-Route::get('/storage', ['as' => 'uploaded-file', 'uses' => function() {
-	$path = $_GET['path'];
-	if (!$path) {
-	    abort(404);
-	}
-	return response()->file( storage_path('app/') . $path);
-}]);
-```
-
 Finally, inside the view:
 
 ```html
