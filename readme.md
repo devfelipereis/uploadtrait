@@ -23,7 +23,7 @@ In your model, set the base path for your uploads:
 
 ```php
 ...
-use App\Traits\UploadTrait;
+use DevFelipeReis\UploadTrait\UploadTrait;
 
 class Company extends Model
 {
