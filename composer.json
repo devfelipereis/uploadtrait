@@ -1,5 +1,5 @@
 {
-    "name": "felipereis/uploadtrait",
+    "name": "devfelipereis/uploadtrait",
     "description": "A simple upload trait for Laravel",
     "type": "library",
     "license": "MIT",
