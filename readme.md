@@ -74,5 +74,5 @@ Finally, inside the view:
 Maybe you want to delete that image, try this:
 
 ```php
-    $company->deleteUploadFor('photo');
+$company->deleteUploadFor('photo');
 ```
