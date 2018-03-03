@@ -1,0 +1,15 @@
+{
+    "name": "felipereis/uploadtrait",
+    "description": "A simple upload trait for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Felipe Reis",
+            "email": "feelipereis7@gmail.com",
+            "homepage": "https://felipereis.blog.br"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
