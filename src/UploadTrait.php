@@ -134,7 +134,7 @@ trait UploadTrait
         if (empty($attributeValue)) {
             return ''; // Idk what to do here yet. To not break your app, It will just return a empty string
         }
-        return $this->buildURL($attributeValue);
+        return $this->buildUploadURL($attributeValue);
     }
 
     /**
