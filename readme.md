@@ -4,14 +4,19 @@ It will upload to the local storage if in development and to a s3 bucket if in p
 
 For production, you need to follow the laravel documentation to set s3 as your default cloud disk.
 
-Just tested with Laravel 5.4. But it should work with Laravel 5.x.
+Just tested with Laravel 5.4+. But it should work with Laravel 5.x.
 
 Note: This is something made for my setup and works good. I like storage for dev and s3 for production. Feel free to change whatever you like to meet your needs ;)
 
 ### How to install
 
 ```
-composer require devfelipereis/uploadtrait
+composer require devfelipereis/uploadtrait:dev-master
+```
+If you are running Laravel 5.4 or below, you will need to add the service provider to the providers array in your app.php config as follows:
+
+```
+DevFelipeReis\UploadTrait\UploadTraitServiceProvider::class
 ```
 
 Now see the example below to understand how to use it.
