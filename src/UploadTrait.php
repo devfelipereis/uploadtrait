@@ -79,6 +79,31 @@ trait UploadTrait
         return $storage_path;
     }
 
+    public function uploadBase64($base64String)
+    {
+        $photo = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $base64String));
+        $fileName = md5(time().$this->id);
+        $fileExtension = substr ( $base64String  , 11, strpos($base64String, ';base64')-11);
+
+        $storage_path = strtr(':path:fileName.:fileExtension', [
+            ':path' => $this->getBaseUploadFolderPath(),
+            ':fileName' => $fileName,
+            ':fileExtension' => $fileExtension,
+        ]);
+
+        if ($this->isProduction()) {
+            if (!$this->uploadBase64ToS3($storage_path, $photo)) {
+                throw new Exception("Error when saving file to disk");
+            }
+        } else {
+            if (!Storage::put($storage_path, $photo)) {
+                throw new Exception("Error when saving file to disk");
+            }
+        }
+
+        return $storage_path;
+    }
+
     /**
      * It will prepare the file path(the base path for the file) based on the environment
      *  Dev and production envs have some differences, plz check the code below
@@ -108,6 +133,10 @@ trait UploadTrait
      */
     private function uploadToS3($file, $filePath) {
         return $file->store($filePath, 's3');
+    }
+
+    private function uploadBase64ToS3($filePath, $fileContents) {
+        return Storage::disk('s3')->put($filePath, $fileContents);
     }
 
     /**
