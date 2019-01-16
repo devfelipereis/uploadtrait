@@ -8,6 +8,12 @@ Just tested with Laravel 5.4+. But it should work with Laravel 5.x.
 
 Note: This is something made for my setup and works good. I like storage for dev and s3 for production. Feel free to change whatever you like to meet your needs ;)
 
+```
+When not using s3, the generated url will be something like this: site.com/storage?path=something/something.jpg
+Do not use this in production, it's only for dev.
+It is vulnerable with Full Path Disclosure (https://www.owasp.org/index.php/Full_Path_Disclosure)
+```
+
 ### How to install
 
 ```
